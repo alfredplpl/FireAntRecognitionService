@@ -1,2 +1,2 @@
 # FireAntRecognitionService
-A repository to constrct 
+A repository to construct a service to recognize fire ant pictures.
