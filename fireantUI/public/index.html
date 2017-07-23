@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="jp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="upload image.">
+    <meta name="author" content="alfredplpl">
+
+    <title>ヒアリ画像判定サービス（仮）</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/theme.css" rel="stylesheet">
+
+  </head>
+
+	<body>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Fire Ant Recognition</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li ><a href="index.html">Home</a></li>
+            <li ><a href="contact.html">Contact</a></li>
+            <li ><a href="acknowledgement.html">Acknowledgement</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+	<div class="container theme-showcase" role="main">
+	<div class="jumbotron">
+			<h1>そのアリ画像、ヒアリですか？</h1>
+		<p>話題のディープラーニングがお調べ致します。</p>
+	</div>
+		<p>使い方：「ファイルを選択」ボタンを押して画像を選択してから、「判定」ボタンを押してください。</p>
+	  	<form method="post" enctype="multipart/form-data" action="/upload">
+	    	<p><input type="file" name="upfile" accept="image/jpeg,image/png" /></p>
+	   		<p><input type="submit" value="判定" /></p>
+	  	</form>
+       
+  	<h3>お試し用画像</h3>
+	  	<p>リンク先の画像を保存して本サービスをお試しください</p>
+	  	<a href="img/fireant.jpg">ヒアリ画像</a><br>
+	  	<a href="img/tigerant.jpg">ヒアリではないアリ画像</a><br>
+      <a href="img/ameiro.jpg">ヒアリっぽいアリ画像</a> from www.AntWeb.org (CC BY 4.0)<br>
+      <a href="img/arigumo.jpg">ヒアリっぽいクモ画像</a> (c) OpenCage (CC BY-SA 2.5)<br>
+      
+		<h3>免責事項</h3>
+		<ul>
+			<li>あくまで簡易判定機です。本当にヒアリの画像かどうかを調べたい場合は専門家に問い合わせてください。</li>
+      <li>利用の結果生じた損害について、一切責任を負いません。</li>
+			<li>アリ以外の画像を判定した結果に関しては何も保証致しません</li>
+      <li>事前の予告無く、コンテンツの提供を中止する可能性があります。</li>
+		</ul>
+
+    <h3>注意事項</h3>
+    <ul>  
+      <li>このサイトにおけるヒアリ(fire ant)とは主にRed Imported Fire AntとEuropian Fire Antのことをさします。
+      Fire antには200種類以上<sup><a href="#fn1" id="ref1">1</a></sup>存在し、その全てに対応することは
+      困難と判断しました。ご了承ください。</li>
+      <li>判定するために送信された画像は以下の理由によって保存されます。あらかじめご了承ください。</li>
+      <ul>
+        <li>判定結果を表示するため</li>
+        <li>ヒアリ判定機の精度を向上させるため</li>
+      </ul>
+    </ul>
+
+		<h3>更新履歴</h3>
+		<ul>
+      <li>2017/07/23 学習方法を変えて認識性能を上げました。</li>
+      <li>2017/07/16 ノコギリハリアリの誤認識を下げたりヒアリそのものの認識性能を上げたりしました。また、脆弱性の一部を解消しました。</li>
+      <li>2017/07/15 アリグモを判定できるようになりました。また、アメイロアリへの誤判定を減らしました。ただし、判定が難しくなったせいか精度は落ちました。（精度95%→90%）。</li>
+      <li>2017/07/12 判定機の性能を大幅に向上させました（精度90%→95%）。脆弱性の一部を解消しました。</li>
+			<li>2017/07/09 テスト画像をつけました。サービス監視機能を入れました。</li>
+			<li>2017/07/09 とにかくリリースしてみました</li>
+		</ul>
+		<h3>連絡先</h3>
+		<p>このサイトはアルフプラプラが作って運営しています。
+    	苦情などはTwitterのalfredplplにリプライしてください。</p>
+      	<a href="https://twitter.com/alfredplpl">Twitterに飛ぶ</a>	
+    <h3>謝辞</h3>
+      <a href="acknowledgement.html">Acknowledgementへ</a>
+
+    <h4>脚注</h4>
+      <sup id="fn1">[1] https://en.wikipedia.org/wiki/Fire_ant<a href="#ref1" title="https://en.wikipedia.org/wiki/Fire_ant">↩</a></sup>
+	</div>
+  	</body>
+</html>
